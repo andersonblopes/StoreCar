@@ -3,14 +3,13 @@ package com.storecar.StoreCar.data;
 import java.util.UUID;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import com.storecar.StoreCar.document.Car;
 import com.storecar.StoreCar.repository.CarRepository;
 
 import reactor.core.publisher.Flux;
 
-@Component
+//@Component
 public class CarData implements CommandLineRunner {
 	private final CarRepository carRepository;
 
