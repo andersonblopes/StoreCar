@@ -8,7 +8,6 @@ public class StoreCarApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StoreCarApplication.class, args);
-		System.out.println("Hello world!");
 	}
 
 }
