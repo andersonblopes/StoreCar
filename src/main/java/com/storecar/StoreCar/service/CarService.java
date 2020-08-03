@@ -32,4 +32,12 @@ public interface CarService {
      */
     Mono<Car> save(Car car);
 
+
+    /**
+     * Delete.
+     *
+     * @param id the id
+     */
+    void deleteById(String id);
+
 }

@@ -1,4 +1,4 @@
-package com.storecar.StoreCar.data;
+package com.storecar.StoreCar.util;
 
 import com.storecar.StoreCar.document.Car;
 import com.storecar.StoreCar.repository.CarRepository;
@@ -11,7 +11,7 @@ import java.util.UUID;
  * The type Car data.
  */
 //@Component
-public class CarData implements CommandLineRunner {
+public class CarUtil implements CommandLineRunner {
 
     /**
      * The Car repository.
@@ -23,7 +23,7 @@ public class CarData implements CommandLineRunner {
      *
      * @param carRepository the car repository
      */
-    CarData(CarRepository carRepository) {
+    CarUtil(CarRepository carRepository) {
         this.carRepository = carRepository;
     }
 
