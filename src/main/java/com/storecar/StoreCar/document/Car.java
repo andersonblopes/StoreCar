@@ -6,30 +6,29 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Car {
 
-	@Id
-	private String id;
-	private String Model;
+    @Id
+    private String id;
+    private String model;
 
-	public Car(String id, String model) {
-		super();
-		this.id = id;
-		Model = model;
-	}
+    public Car(String id, String model) {
+        super();
+        this.id = id;
+        this.model = model;
+    }
 
-	public String getId() {
-		return id;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public String getModel() {
-		return Model;
-	}
+    public String getModel() {
+        return model;
+    }
 
-	public void setModel(String model) {
-		Model = model;
-	}
-
+    public void setModel(String model) {
+        this.model = model;
+    }
 }
