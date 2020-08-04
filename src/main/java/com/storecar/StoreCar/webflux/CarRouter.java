@@ -11,9 +11,18 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
+/**
+ * The type Car router.
+ */
 @Configuration
 public class CarRouter {
 
+    /**
+     * Route router function.
+     *
+     * @param handler the handler
+     * @return the router function
+     */
     @Bean
     public RouterFunction<ServerResponse> route(CarHandler handler) {
         return RouterFunctions.route(GET("/car").and(accept(MediaType.APPLICATION_JSON)), handler::findAll)
