@@ -8,14 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 /**
  * The type Car controller.
  */
-@RestController
+//@RestController
 public class CarController {
 
     /**
@@ -49,7 +48,7 @@ public class CarController {
      * @return the mono
      */
     @GetMapping("/car/{id}")
-    public Mono<Car> findById(@PathVariable String id) {
+    public Mono<Car> findById(@PathVariable("id") String id) {
         return carService.findById(id);
     }
 
@@ -72,12 +71,6 @@ public class CarController {
      */
     @DeleteMapping("/car/{id}")
     public ResponseEntity delete(@PathVariable("id") String id) {
- /*
-        Mono<Car> car = carService.findById(id);
-        if (car == null) {
-            return ResponseEntity.notFound().build();
-        }
-  */
         carService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
