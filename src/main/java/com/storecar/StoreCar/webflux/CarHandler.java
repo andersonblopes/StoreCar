@@ -3,7 +3,6 @@ package com.storecar.StoreCar.webflux;
 import com.storecar.StoreCar.document.Car;
 import com.storecar.StoreCar.service.CarService;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
@@ -15,7 +14,7 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 /**
  * The type Car handler.
  */
-@Component
+//@Component
 public class CarHandler {
 
     /**
